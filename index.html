@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#101b31"><title>School Gang Battle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div><div class="eyebrow">PIXEL ART 2D • MOBILE BEAT 'EM UP</div><h1>SCHOOL GANG BATTLE</h1></div><button id="soundToggle" class="smallbtn" aria-label="Matikan suara">🔊 Suara</button></header>
+<main>
+<section class="game-shell">
+  <div class="hud">
+    <div class="portrait">★</div><div class="health-wrap"><div class="hud-name">PLAYER <span id="playerLevel">LV. 1</span></div><div class="bar"><i id="playerHp"></i></div></div>
+    <div class="stage-label"><span>ARENA</span><b id="arenaName">DEPAN SEKOLAH</b></div>
+    <div class="health-wrap enemy-hud"><div class="hud-name">MUSUH <span id="enemyHpText">100%</span></div><div class="bar enemybar"><i id="enemyHp"></i></div></div>
+  </div>
+  <div class="canvas-wrap"><canvas id="game" width="960" height="520" aria-label="Area permainan"></canvas><div id="toast" class="toast">Pilih arena lalu mulai bertarung!</div><div class="start-overlay" id="startOverlay"><div class="start-card"><div class="pixel-star">✦</div><h2>SIAP BERTARUNG?</h2><p>Gerakkan player, hindari serangan, dan kalahkan semua musuh.</p><button id="startBtn" class="primary">MULAI GAME</button></div></div></div>
+  <div class="arena-row"><span>ARENA:</span><button class="arena active" data-arena="school">🏫 Depan Sekolah</button><button class="arena" data-arena="koperasi">🏪 Koperasi Desa</button><button class="arena" data-arena="mbg">🏢 Kantor MBG</button></div>
+  <div class="controls"><div class="dpad"><button data-action="left">◀</button><button data-action="up">▲</button><button data-action="down">▼</button><button data-action="right">▶</button></div><div class="control-hint">Gerak • Lompat • Serang</div><div class="action-buttons"><button data-action="jump" class="jump">↟<small>LOMPAT</small></button><button data-action="kick" class="kick">➤<small>TENDANG</small></button><button data-action="punch" class="punch">✊<small>PUKUL</small></button></div></div>
+</section>
+<section class="lower-grid">
+ <article class="panel"><h2>STATUS PERTARUNGAN</h2><p id="status">Belum mulai. Tekan MULAI GAME.</p><div class="statline"><span>Musuh dikalahkan</span><b id="wins">0</b></div><div class="statline"><span>Combo</span><b id="combo">x0</b></div></article>
+ <article class="panel"><h2>EFEK SUARA</h2><p>Suara pukulan, tendangan, lompat, kena hit, menang, kalah, meme lucu, dan tombol dibuat langsung di game. Browser mungkin meminta sentuhan pertama sebelum audio aktif.</p><label class="volume-label">Volume <input id="volume" type="range" min="0" max="100" value="55"><b id="volumeText">55%</b></label></article>
+ <article class="panel"><h2>CARA MAIN</h2><p>HP: gunakan tombol layar atau keyboard. A/D atau ←/→ untuk bergerak, W/S atau ↑/↓ untuk posisi, J pukul, K tendang, dan Spasi lompat.</p></article>
+</section>
+</main><footer>Prototype playable • Simpan project ini di GitHub untuk dikembangkan lebih lanjut.</footer>
+<script src="game.js"></script>
+</body></html>
